@@ -1,0 +1,126 @@
+.cinema {
+  &__content {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    margin-left: 335px;
+    display: flex;
+    align-items: flex-start;
+    gap: 148px;
+  }
+  &__seats {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 818px;
+    row-gap: 37px;
+    column-gap: 58px;
+    &__seat {
+      width: 50px;
+      height: 45px;
+      & svg {
+        width: 100%;
+        height: 100%;
+      }
+      &--choise {
+        & svg path {
+          fill: $yellow;
+        }
+      }
+      &--free {
+        & svg path {
+          fill: $blue;
+        }
+      }
+      &--picked {
+        & svg path {
+          fill: $purple;
+        }
+      }
+    }
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 53px;
+  }
+  &__history {
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      &__color {
+        &--yellow {
+          width: 30px;
+          height: 30px;
+          border-radius: 8px;
+          background-color: $yellow;
+        }
+        &--blue {
+          width: 30px;
+          height: 30px;
+          border-radius: 8px;
+          background-color: $blue;
+        }
+        &--purple {
+          width: 30px;
+          height: 30px;
+          border-radius: 8px;
+          background-color: $purple;
+        }
+      }
+      &__text {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+
+        color: #000000;
+      }
+    }
+    &__item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__results {
+    &__title {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: #000000;
+    }
+    &__list {
+      margin-top: 9px;
+      margin-left: 15px;
+      &__item {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+
+        color: #000000;
+      }
+      &__item:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      &__item::before {
+        content: "";
+        width: 5px;
+        height: 6px;
+        display: inline-block;
+        background-image: url(../img/list__marker.svg);
+        margin-right: 5px;
+      }
+    }
+    &__submit {
+      cursor: pointer;
+      margin-top: 25px;
+      padding: 8px 25px;
+      background: #18adad;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+
+      color: #f3f3f3;
+    }
+  }
+}
